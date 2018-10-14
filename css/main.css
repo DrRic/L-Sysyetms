@@ -1,0 +1,175 @@
+*{
+	box-sizing:border-box;
+}
+
+body{
+	font-family: 'Athiti', sans-serif;
+	background-color: #fefefe;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: absolute;
+  	 top: 50%;
+  	 transform: translateY(-50%);
+}
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fefefe;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav-btn {
+    padding: 6px 6px 6px 32px;
+    font-size: 25px;
+    color: #444444;
+    display: block;
+    border-left-style: solid;
+    border-left-color: #fefefe;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.sidenav-btn:hover {
+    color: #111111;
+    border-left-color: #444444;
+
+}
+
+
+.card{
+	width: 100%;
+	padding:20px;
+	background-color: #fefefe;
+	border:solid;
+	position: relative;
+}
+
+.card-100{
+	width: 100%;
+	height: 100px;
+	padding:0px;
+	background-color: #fefefe;
+	position: relative;
+}
+
+.card-200{
+	width: 100%;
+	height: 200px;
+	padding:0px;
+	background-color: #fefefe;
+	position: relative;
+}
+
+
+.label{
+    position: absolute;
+  	 top: 50%;
+  	 transform: translateY(-50%);
+ }
+.main {
+   margin-left: 250px;
+	height 120px;
+}
+
+.row {
+	width:100%
+  }
+  
+  
+.row::after{
+	content: "";
+	clear:both;
+	display: table;
+  }
+
+.col-40 {
+	width: 40%;
+	float: left;
+  }
+
+.col-60 {
+	width: 60%;
+	float: left;
+}
+
+.col-20 {
+	width: 20%;
+	float: left;
+  }
+
+.col-80 {
+	width: 80%;
+	float: left;
+}
+
+.test{
+	color: red;
+}
+
+
+.quantity input {
+  width: 45px;
+  height: 42px;
+  line-height: 1.65;
+  float: left;
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  border: 1px solid #eee;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: relative;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  border-left: 1px solid #eee;
+  width: 20px;
+  text-align: center;
+  color: #333;
+  font-size: 13px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+  line-height: 1.7;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  bottom: -1px;
+  height: 50%;
+}
+
