@@ -6,11 +6,12 @@
 <link rel="stylesheet" href="css/main.css">
 <link href="https://fonts.googleapis.com/css?family=Athiti|Quicksand" rel="stylesheet"></head>
 <body>
+
 <div class="sidenav">
   <div class="sidenav-btn">About</div>
   <div class="sidenav-btn" onclick="addRule()">Add Rule</div>
-  <div class="sidenav-btn">Iteration +</div>
-  <div class="sidenav-btn">Iteration -</div>
+  <div class="sidenav-btn" onclick="addIteration()">Iteration +</div>
+  <div class="sidenav-btn" onclick="subtractIteration()">Iteration -</div>
   <div class="sidenav-btn" onclick="getRules()">Run</div>
   
 </div>
@@ -25,7 +26,7 @@
 		</div>
 		<div class="col-80">
 			<div class="card-100">
-				 <input type="text" name="axiom" value="B">		
+				 <input type="text" id="axiom" value="B">		
 			</div>  
 		</div>
   </div>

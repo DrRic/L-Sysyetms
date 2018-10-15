@@ -1,5 +1,6 @@
 
 var currentRule = 0;
+var iterations =1;
 
 
 function addRule() {
@@ -38,7 +39,53 @@ function addRule() {
 
 function getRules() {
 	var rules = document.getElementsByClassName("input-rule");
+	ruleArray=[]
 	for(i=0;i<rules.length;i++){
-		console.log(rules[i].value)	
+		rule = rules[i].value.split('->')
+		ruleArray.push(rule)	
 	} 
+	console.log(ruleArray)
+	var axiom = document.getElementById("axiom")
+	console.log(axiom.value);
+	console.log(parse(axiom.value,ruleArray));
+	
+}
+
+function parse( startString, rules) {
+	var newString=""
+	console.log(startString.length);
+	console.log(rules);
+	for(i=0; i<startString.lenght; i++){
+		focusString = startString[i]
+		console.log("here",focusString)
+		console.log(focusString);
+		for (j=0;j<rules.length;j++) {
+			console.log(focusString,rules[j][0]);
+			if (focusString==rules[j][0]) {
+				focusString="";
+				newString+=rules[j][1];			
+			}		
+		}
+		if (focusString!="") {
+			newString+=focusString;		
+		}
+	}
+	return newString;
+}
+
+
+function addIteration() {
+	console.log(iterations)
+	iterations++;
+	element =  document.getElementById("iteration");
+	element.value = iterations;
+}
+
+function subtractIteration() {
+	iterations--;
+	if(iterations <1){
+		iterations = 1;	
+	}
+	element =  document.getElementById("iteration");
+	element.value = iterations;
 }

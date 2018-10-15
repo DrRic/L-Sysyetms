@@ -2,15 +2,16 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>L-Systems</title>
+<title>L-System</title>
 <link rel="stylesheet" href="css/main.css">
 <link href="https://fonts.googleapis.com/css?family=Athiti|Quicksand" rel="stylesheet"></head>
 <body>
+
 <div class="sidenav">
   <div class="sidenav-btn">About</div>
   <div class="sidenav-btn" onclick="addRule()">Add Rule</div>
-  <div class="sidenav-btn">Iteration +</div>
-  <div class="sidenav-btn">Iteration -</div>
+  <div class="sidenav-btn" onclick="addIteration()">Iteration +</div>
+  <div class="sidenav-btn" onclick="subtractIteration()">Iteration -</div>
   <div class="sidenav-btn" onclick="getRules()">Run</div>
   
 </div>
