@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>clock</title>
+<style>
+line{
+	stroke:blue;
+	stroke-width:1px;
+}
+</style>
+</head>
+<body>
+<button onclick="rotate()">Click</button>
+<br>
+<br>
+<div id="svgcanvas"></div>
+
+<script>
+var angle = 90;
+var length = 100;
+
+// Converts from degrees to radians.
+Math.radians = function(degrees) {
+  return degrees * Math.PI / 180;
+};
+ 
+// Converts from radians to degrees.
+Math.degrees = function(radians) {
+  return radians * 180 / Math.PI;
+};
+
+
+function rotate() {
+	var y = 0;
+	var height=300;
+	var yy = Math.sin(Math.radians(angle))*length+y;
+	
+	var x = 150;
+	var xx = Math.cos(Math.radians(angle))*length+x; 
+	var newSvg = document.getElementById('svgcanvas');
+		newSvg.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="margin:0;padding:0;top:0em;left:0.5em; border:solid"  width="300px" height="300px"><line x1="'+x+'" y1="'+(height-y)+'" x2="'+xx+'" y2="'+(height-yy)+'" /></svg>';
+		angle+=10;
+	
+}
+</script>
+</body>
+</html>

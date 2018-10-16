@@ -17,7 +17,7 @@
 </div>
 
 <div class="main">
-  <h2>L-System</h2>
+  <h2>L-System </h2>
   <div class="row">
 		<div class="col-20">
 			<div class="card-100">
@@ -51,16 +51,29 @@
   <div class="row">
 		<div class="col-20">
 			<div class="card-100">
-				 <div>Output</div>			
+				 <div>Output string</div>			
 			</div>		
 		</div>
 		<div class="col-80">
-			<div class="card-100">
+			<div class="card">
 				 <textarea id="output"></textarea>		
 			</div>  
 		</div>
   </div>
-		  
+  
+    <div class="row">
+		<div class="col-20">
+			<div class="card-100">
+				 <div>Output</div>			
+			</div>		
+		</div>
+		<div class="col-80">
+			<div class="card">
+				<div id="svgcanvas"></div>
+			</div>  
+		</div>
+  	</div>
+  </div>
 	
 
 

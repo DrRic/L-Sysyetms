@@ -52,6 +52,30 @@ function runRules() {
 		outputString = parse(outputString,ruleArray);
 		console.log(outputString);
 	}
+	
+	var element = document.getElementById("output")
+	element.value = outputString;
+	var newSvg = document.getElementById('svgcanvas');
+		newSvg.outerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="margin:0;padding:0;top:0em;left:0.5em"  width="100px" height="100px"><circle cx="40" cy="40" r="40" stroke="red" stroke-width="4" fill="blue" /></svg>';
+		expand(outputString);
+}
+
+
+function expand(string) {
+	if (string[0]=="B") {
+		
+		console.log("BUD");
+		return 0;	
+	}
+	
+	if (string[0]=="-") {
+		console.log("left");	
+	} else if (string[0]=="+") {
+		console.log("Right");	
+	} else {
+		console.log(string[0]);	
+	}
+	expand( string.substr(1, string.length) )
 }
 
 function parse( startString, rules) {
