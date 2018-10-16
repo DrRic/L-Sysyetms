@@ -12,7 +12,7 @@
   <div class="sidenav-btn" onclick="addRule()">Add Rule</div>
   <div class="sidenav-btn" onclick="addIteration()">Iteration +</div>
   <div class="sidenav-btn" onclick="subtractIteration()">Iteration -</div>
-  <div class="sidenav-btn" onclick="getRules()">Run</div>
+  <div class="sidenav-btn" onclick="runRules()">Run</div>
   
 </div>
 
@@ -26,7 +26,7 @@
 		</div>
 		<div class="col-80">
 			<div class="card-100">
-				 <input type="text" name="axiom" value="B">		
+				 <input type="text" id="axiom" value="B">		
 			</div>  
 		</div>
   </div>
@@ -47,6 +47,19 @@
 		</div>
   </div>
 		
+
+  <div class="row">
+		<div class="col-20">
+			<div class="card-100">
+				 <div class="label">Output</div>			
+			</div>		
+		</div>
+		<div class="col-80">
+			<div class="card-100">
+				 <textarea id="output"></textarea>		
+			</div>  
+		</div>
+  </div>
 		  
 	
 

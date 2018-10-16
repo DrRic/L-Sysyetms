@@ -18,6 +18,16 @@ input {
   	 transform: translateY(-50%);
 }
 
+textarea {
+	height:150px;
+	width: 100%;
+   padding: 12px 20px;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+  	resize: none;
+}
+
 .sidenav {
     height: 100%;
     width: 250px;

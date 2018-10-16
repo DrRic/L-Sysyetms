@@ -7,7 +7,7 @@ body{
 	background-color: #fefefe;
 }
 
-input[type=text] {
+input {
     width: 100%;
     padding: 12px 20px;
     display: inline-block;
@@ -16,6 +16,17 @@ input[type=text] {
     position: absolute;
   	 top: 50%;
   	 transform: translateY(-50%);
+}
+
+textarea {
+	height:150px;
+	width: 100%;
+   padding: 12px 20px;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+  	resize: none;
+  	overflow: scroll;
 }
 
 .sidenav {

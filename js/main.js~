@@ -37,28 +37,28 @@ function addRule() {
 	currentRule++;
 }
 
-function getRules() {
+function runRules() {
 	var rules = document.getElementsByClassName("input-rule");
 	ruleArray=[]
 	for(i=0;i<rules.length;i++){
 		rule = rules[i].value.split('->')
 		ruleArray.push(rule)	
 	} 
-	console.log(ruleArray)
+	//console.log(ruleArray)
 	var axiom = document.getElementById("axiom")
-	console.log(axiom.value);
-	console.log(parse(axiom.value,ruleArray));
+	var outputString = axiom.value;
 	
+	for (var i =0; i<iterations;i++) {
+		outputString = parse(outputString,ruleArray);
+		console.log(outputString);
+	}
 }
 
 function parse( startString, rules) {
 	var newString=""
 	console.log(startString.length);
-	console.log(rules);
-	for(i=0; i<startString.lenght; i++){
+	for(i=0; i<startString.length; i++){
 		focusString = startString[i]
-		console.log("here",focusString)
-		console.log(focusString);
 		for (j=0;j<rules.length;j++) {
 			console.log(focusString,rules[j][0]);
 			if (focusString==rules[j][0]) {
