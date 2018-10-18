@@ -62,30 +62,36 @@ function runRules() {
 
 
 function expand(string) {
-	
-	if (string[0]=="B") {
-		
-		console.log("BUD");
-		return 0;	
+	countl=0
+	countr=0
+	stack=[]
+	for(var i=0; i<string.length; i++){
+		if ((string[i]=="F")||(string[i]=="B")){
+			console.log(string[i])		
+		}
+		if(string[i]=="-"){
+			stack.push("left"+countl);
+			console.log("left"+countl);
+			countl++;
+		}	
+		if(string[i]=="+"){
+			stack.push("right"+countr)
+			console.log("right"+countr);
+			countr++;
+		}	
+		if(string[i]=="]"){
+			console.log("back to "+stack.pop())		
+		}
 	}
+}	
 	
-	if (string[0]=="-") {
-		console.log("left");	
-	} else if (string[0]=="+") {
-		console.log("Right");	
-	} else {
-		console.log(string[0]);	
-	}
-	expand( string.substr(1, string.length) )
-}
+	
 
 function parse( startString, rules) {
 	var newString=""
-	console.log(startString.length);
 	for(i=0; i<startString.length; i++){
 		focusString = startString[i]
 		for (j=0;j<rules.length;j++) {
-			console.log(focusString,rules[j][0]);
 			if (focusString==rules[j][0]) {
 				focusString="";
 				newString+=rules[j][1];			
@@ -100,7 +106,6 @@ function parse( startString, rules) {
 
 
 function addIteration() {
-	console.log(iterations)
 	iterations++;
 	element =  document.getElementById("iteration");
 	element.value = iterations;
